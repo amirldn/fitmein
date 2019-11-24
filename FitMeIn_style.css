@@ -1,0 +1,18 @@
+body{
+	background-image: url("background.jpg")
+}
+
+nav {
+	height:180px;
+	background-color: #367f39;
+	text-align: right;
+	vertical-align: middle;
+	line-height: 180px;
+	font-size: 30px;
+	word-spacing: 40px;
+	color: white;
+		 }
+ a {
+ 	color: white;
+ 	text-decoration: none;
+ }
