@@ -4,6 +4,7 @@ body{
 	background-repeat: repeat;
  	background-size: auto 800px;
  	font-family: 'Roboto';
+ 	background-color: #367f39
 }
 ul {
   list-style-type: none;
@@ -16,8 +17,21 @@ ul {
   height:120px;
   width: 100%;
 }
-li {
-  float: right;
+img { 
+	max-width:100%; 
+	height:auto;
+}
+#logoImg{
+	width: 250px;
+	padding-left: 20px;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+#navBarOption{
+	float: right;
 }
 li a {
   display: block;
