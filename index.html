@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 	<head>
-		<link rel="stylesheet" type="text/css" href="css/FitMeIn_style.css">
+		<link type="text/css" rel="stylesheet" href="css/FitMeIn_style.css"  media="screen,projection"/>
+      	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
 		<meta charset="UTF-8">
 		<title>FitMeIn</title>
+
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	</head>
+	
+
+
 	<body>
-		<nav>
-			<ul>
-				<a href="index.html"><img src="./images/fitmein_logo_final.png" id="logoImg"></a>
-				<li id="navBarOption"><div id="extraRightPadding"><a href="login.html"> Login </a></div>
-				<li id="navBarOption"><div id="navBarDivider"><p>|</p></div>
-				<li id="navBarOption"><a href="about.html"> About </a>
-				<li id="navBarOption"><a href="legal.html"> Legal </a>
-				<li id="navBarOption"><a href="itinerarySearch.html"> Itinerary </a>
-			</ul>
-		</nav>
+		<div class="navbar-fixed">
+			<nav>
+	    		<div class="nav-wrapper green darken-1">
+	      			<a href="#" class="brand-logo">FitMeIn</a>
+	      			<ul id="nav-mobile" class="right hide-on-med-and-down">
+	       				<li><a href="itinerarySearch.html">Itinerary</a></li>
+	        			<li><a href="legal.html">Legal</a></li>
+	       				<li><a href="about.html">About</a></li>
+						<li><div id="navBarDivider"><p>|</p></div>
+						<li><a href="login.html"> Login </a>
+
+	      			</ul>
+	    		</div>
+	  		</nav>
+  		</div>
 
 
-		<div class="containerBody">
-  			<div class="centerBody">
-  				<div class="welcomeText">
-	   				<h1>Welcome!</h1>
-					<h2>Where would you like to go and when?</h2>
-				</div>
- 		 	</div>
+		<div class="container">
+	   		<div class="header center"><h1 style="color: white">Welcome!</h1></div>
+	   		<div class="row center">
+				<div class="header col s12 light"><h2 style="color: white; font-size: 30px">Where would you like to go and when?</h2></div>
+			</div>
 		</div>
 
 

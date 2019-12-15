@@ -3,25 +3,9 @@ body{
 	margin:0;
 	background-repeat: repeat;
  	background-size: auto 800px;
- 	font-family: 'Roboto';
- 	background-color: #367f39
 }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #367f39;
-  position: fixed;
-  top: 0;
-  height:120px;
-  width: 100%;
-}
-img { 
-	max-width:100%; 
-	height:auto;
-}
-#logoImg{
+
+#FitMeInLogoNav{
 	width: 250px;
 	padding-left: 20px;
 	margin: 0;
@@ -29,9 +13,6 @@ img {
 	top: 50%;
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
-}
-#navBarOption{
-	float: right;
 }
 #navBarDivider {
 	display: block;
@@ -41,39 +22,4 @@ img {
 	text-decoration: none;
 	font-size: 30px;
 	font-family: Times;
-}
-li a {
-	font-size: 20px;
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 50px 16px;
-	text-decoration: none;
-}
-#extraRightPadding {
-	padding-right: 20px;
-}
-.active {
-  background-color: #4CAF50;
-  color: white;
-}
-li a:hover:not(.active) {
-  background-color: #8FBC8F;
-}
-.containerBody { 
-	padding-top: 120px;
-  height: 200px;
-  width: 100%;
-  position: relative;
-  text-align: center;
-}
-.centerBody {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.welcomeText{
-	color: white;
 }
