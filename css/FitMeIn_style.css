@@ -2,12 +2,13 @@ body{
 	background-image: url("../images/background.jpg");
 	margin:0;
 	width: 100%;
+	height: auto;
  	background-repeat: no-repeat;
   	background-size: cover;
 }
 
 #FitMeInLogoNav{
-	width: 250px;
+	width: 170px;
 	padding-left: 20px;
 	margin: 0;
 	position: absolute;
