@@ -16,7 +16,7 @@
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		<script type="text/javascript" src="js/fit.js"></script>
-
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU&libraries=places"></script>
 	</head>
 
 	<header>
@@ -60,7 +60,7 @@
 
 													<form>
 										        <div class="input-field">
-										          <input id="search" type="search" placeholder="🔎 Location Search..." style="color: black;" required>
+										          <input id="search" id="placeIDfromSearchBox" type="search" placeholder="🔎 Location Search..." style="color: black;" required>
 										          <label class="label-icon" for="search"></label>
 										          <i class="material-icons">close</i>
 										        </div>
@@ -106,9 +106,9 @@
 															<a href="#!" onclick="M.toast({html: 'Searching...', completeCallback: myembedjs()})" class="modal-close waves-effect waves-green btn-flat">Agree</a>
 														</div>
 													</div>
-
 												</div>
 
+												<div id="map" style="height: 300px;"></div>
 
 
 
