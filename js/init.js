@@ -26,3 +26,7 @@ $('.timepicker').timepicker({
     dropdown: true,
     scrollbar: true
 });
+
+function myembedjs(){
+  alert(findBestTime(new Date(2020, 1, 2), new Date(2020, 1, 04), 9, 17, 60, "ChIJeziKgJKxe0gR8qUIiSmWKJo", "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU"));
+}
