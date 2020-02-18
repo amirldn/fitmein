@@ -34,8 +34,3 @@ function myembedjs(){
 }
 
 //ChIJeziKgJKxe0gR8qUIiSmWKJo PLACE ID ORIGINAL
-
-// initalise gmaps to get placeID
-function initMap() {
-
-}
