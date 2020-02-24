@@ -30,13 +30,7 @@ $('.timepicker').timepicker({
 
 //James
 function myembedjs(){
-<<<<<<< HEAD
   // var inputName = document.getElementById('pac-input').value;
-=======
-  var inputName = document.getElementById('pac-input').value;
-  var retrievedPlaceID = undefined;
-  placeIDReturn();
->>>>>>> 76533bf0abe9266efc222c5a25fd2c5f2dcbbfd3
 
   // NEED TO GET PLACE ID FROM THE INPUTNAME ADDRESS
   alert(findBestTime(new Date(2020, 1, 2), new Date(2020, 1, 04), 9, 17, 60, "ChIJeziKgJKxe0gR8qUIiSmWKJo", "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU"));
