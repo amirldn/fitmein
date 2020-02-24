@@ -26,8 +26,8 @@ function initAutocomplete() {
 function getPlaceID() {
   // Get the place details from the autocomplete object.
   var place = autocomplete.getPlace();
-  var returnedPlaceID = place.place_id
-  alert(returnedPlaceID)
+  returnedPlaceID = place.place_id
+  // alert(returnedPlaceID + ' from auto.js')
 }
 
 // Bias the autocomplete object to the user's geographical location,
