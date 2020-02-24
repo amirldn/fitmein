@@ -30,8 +30,21 @@ $('.timepicker').timepicker({
 
 //James
 function myembedjs(){
+  var retrievedPlaceID = undefined;
+  alert(document.getElementById(searchBoxEntry))
   alert(findBestTime(new Date(2020, 1, 2), new Date(2020, 1, 04), 9, 17, 60, "ChIJeziKgJKxe0gR8qUIiSmWKJo", "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU"));
 }
+
+// This example adds a search box to a map, using the Google Place Autocomplete
+// feature. People can enter geographical searches. The search box will return a
+// pick list containing a mix of places and predicted search terms.
+
+// This example requires the Places library. Include the libraries=places
+// parameter when you first load the API. For example:
+// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+
+
 
 //ChIJeziKgJKxe0gR8qUIiSmWKJo PLACE ID ORIGINAL
 //document.getElementByID('placeIDfromSearchBox')
