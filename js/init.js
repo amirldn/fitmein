@@ -38,14 +38,14 @@ $('.timepicker').timepicker({
 });
 
 
-//Calls james' function
-function myembedjs(){
-  window.location.replace("results.html");
-  findBestTimeCaller()
-}
+// //Calls james' function - need to change the name of the other function though
+// function myembedjs(){
+//   window.location.replace("results.html");
+//   findBestTimeCaller()
+// }
 
 //James' function
-function findBestTimeCaller(){
+function myembedjs(){
   try {
     alert(returnedPlaceID + " From init.js");
   }
