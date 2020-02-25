@@ -38,8 +38,14 @@ $('.timepicker').timepicker({
 });
 
 
-//James
+//Calls james' function
 function myembedjs(){
+  window.location.replace("results.html");
+  findBestTimeCaller()
+}
+
+//James' function
+function findBestTimeCaller(){
   try {
     alert(returnedPlaceID + " From init.js");
   }
