@@ -3,15 +3,25 @@ M.AutoInit();
 
 // Terms and coditions window
 document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.modal');
-  var instances = M.Modal.init(elems, options);
+  var elemsModal = document.querySelectorAll('.modal');
+  var instances = M.Modal.init(elemsModal, preventScrolling=true);
 });
 
 
 // Datepickers
-$( ".datepickerEarliest" ).datepicker({});
+// $( ".datepickerEarliest" ).datepicker({});
+//
+// $( ".datepickerLatest" ).datepicker({});
 
-$( ".datepickerLatest" ).datepicker({});
+document.addEventListener('DOMContentLoaded', function() {
+  var elemsdpE = document.querySelectorAll('.datepickerEarliest');
+  var instances = M.Datepicker.init(elemsdpE, minDate=-1);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elemsdpL = document.querySelectorAll('.datepickerLatest');
+  var instances = M.Datepicker.init(elemsdpL, showClearBtn=true);
+});
 
 
 //Timepicker
@@ -30,7 +40,13 @@ $('.timepicker').timepicker({
 
 //James
 function myembedjs(){
-  alert(returnedPlaceID + " From init.js")
+  try {
+    alert(returnedPlaceID + " From init.js");
+  }
+  catch (e) {
+    alert("You did not enter a location");
+  }
+  // alert(($('.datepickerEarliest').datepicker('toString')).value);
   alert(findBestTime(new Date(2020, 1, 2), new Date(2020, 1, 04), 9, 17, 60, returnedPlaceID, "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU"));
 }
 
