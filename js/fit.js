@@ -47,7 +47,11 @@ function findBestTime(dateMin, dateMax, timeMin, timeMax, timeSpent, placeID, ap
       var tempOpenMin = undefined;
       var tempCloseHr = undefined;
       var tempCloseMin = undefined;
-      var numOfDaysOpen = (parsedJson.result.opening_hours.periods).length;
+      try {
+        var numOfDaysOpen = (parsedJson.result.opening_hours.periods).length;
+      } catch (e) {
+        alert("Error, this location had no open times ")
+      }
       var currentDay = undefined;
       for (var i = 0; i < 7; i++) {
         openingTimes.push(-1);
