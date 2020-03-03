@@ -23,7 +23,7 @@ if ($db) {
 //Register users
 
 $username = mysqli_real_escape_string($db, $_POST['username']);
-$email = mysqli_real_escape_string($db, $_POST['email]');
+$email = mysqli_real_escape_string($db, $_POST['email']);
 $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
 $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
