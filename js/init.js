@@ -53,7 +53,12 @@ function myembedjs(){
     alert("You did not enter a location");
   }
   // alert(($('.datepickerEarliest').datepicker('toString')).value);
-  alert(findBestTime(new Date(2020, 1, 2), new Date(2020, 1, 04), 9, 17, 60, returnedPlaceID, "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU"));
+  var rtndObj = findBestTime(new Date(2020, 1, 2), new Date(2020, 1, 04), 9, 17, 60, returnedPlaceID, "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU");
+  var startDT = rtndObj[0];
+  var endDT = rtndObj[1];
+  
+  window.location.href = ("./results.php?startDT=" + startDT + "&endDT=" + endDT);
+
 }
 
 

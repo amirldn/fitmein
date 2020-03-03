@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+
+$startTime = $_GET["startDT"];
+$endTime = $_GET["endDT"];
+
+?>
+
+
+
 
 <head>
 	<link type="text/css" rel="stylesheet" href="css/FitMeIn_style.css"  media="screen,projection"/>
