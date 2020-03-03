@@ -8,6 +8,10 @@ if(isset($_SESSION['username'])){
   $_SESSION['msg'] = "You must log in first to view this page";
   header("location : ../login.php");
 }
+else {
+  $_SESSION['msg'] = "Username set";
+
+}
 
 if(isset($_GET['logout'])){
 
