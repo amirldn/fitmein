@@ -35,7 +35,7 @@
 		        			<li><a href="legal.html">Legal</a></li>
 		       				<li><a href="about.html">About</a></li>
 							<li><a style="font-size: 20px">|</a>
-							<li><a href="login.html"> Login </a>
+							<li><a href="login.php"> Login </a>
 
 		      			</ul>
 		    		</div>
