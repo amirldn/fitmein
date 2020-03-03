@@ -18,7 +18,7 @@ if(isset($_GET['logout'])){
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Home Page</titel>
+  <title>Home Page</title>
 </head>
 <body>
 
