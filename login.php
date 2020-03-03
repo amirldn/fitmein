@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php include('server.php') ?>
 <html lang="en">
 
 
