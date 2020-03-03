@@ -1,3 +1,4 @@
+<?php include('./database/server.php') ?>
 <?php
 
 session_start();
