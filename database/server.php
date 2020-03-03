@@ -14,9 +14,15 @@ $errors = array();
 $db = mysqli_connect('localhost', 'root', '', 'b66957') or die("could not
 connect to database")
 
+if ($db) {
+  echo 'connected';
+} else {
+  echo 'not connected';
+}
+
 //Register users
 
-// $username = mysqli_real_escape_string($db, $_POST['username']);
+$username = mysqli_real_escape_string($db, $_POST['username']);
 $email = mysqli_real_escape_string($db, $_POST['email]');
 $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
 $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
