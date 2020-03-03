@@ -1,4 +1,4 @@
-<?php include('./database/server.php') ?>
+<!-- <?php include('./database/server.php') ?> -->
 <html lang="en">
 
 
