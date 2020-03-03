@@ -90,13 +90,12 @@ if(isset($_POST['login_user'])) {
 
     $password = md5($password);
 
-    $query = "SELECT * FROM user WHERE username='$username' AND
-    password='$password' "
+    $query = "SELECT * FROM user WHERE username='$username' AND password='$password' ";
     $results = mysqli_query($db, $query);
 
     if(mysqli_num_rows($results)){
 
-      $_SESSION['username'] = $username
+      $_SESSION['username'] = $username;
       $_SESSION['success'] = "Logged in successfully";
       header("location: index.php");
     } else{
