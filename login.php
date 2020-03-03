@@ -84,6 +84,8 @@
 													<a class="waves-effect waves-light btn green darken scale-transition" type="submit" name="login">Log In</a>
 												</div>
 											</form>
+											<p>Not a user?<a href="registraion.php"><b>Register Here</b></a></p>
+
 
 			</div>
 		</div>
