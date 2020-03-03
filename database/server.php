@@ -11,7 +11,12 @@ $errors = array();
 
 //conect to
 
-$db = mysqli_connect('localhost', 'root', '', 'b66957') or die("could not
+$database_host = "dbhost.cs.man.ac.uk";
+$database_user = "b66957am";
+$database_pass = "fitmein123";
+$database_name = "b66957am";
+
+$db = mysqli_connect($database_host, $database_user, $database_pass, $database_name) or die("could not
 connect to database");
 
 if ($db) {
