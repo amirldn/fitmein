@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php include('./database/server.php') ?>
 <html lang="en">
 
 
@@ -62,17 +62,14 @@
 
 												<div class="row center">
 
-													<form>
+													<form action="login.php" method="post">
 										        <div class="input-field">
-										          <input type="email" placeholder="🔎 Email..." style="color: white;" required/>
+										          <input name="username" type="email" placeholder="🔎 Email..." style="color: white;" required/>
 										        </div>
-										      </form>
 
-													<form>
 										        <div class="input-field">
-										          <input type="password" placeholder="🔎 Password..." style="color: white;" required>
+										          <input name="password" type="password" placeholder="🔎 Password..." style="color: white;" required>
 										        </div>
-										      </form>
 
 
 
@@ -84,8 +81,10 @@
 
 
 												<div class="row center">
-													<a class="waves-effect waves-light btn green darken scale-transition" type="submit">Log In</a>
+													<a class="waves-effect waves-light btn green darken scale-transition" type="submit" name="login">Log In</a>
 												</div>
+											</form>
+
 			</div>
 		</div>
 
