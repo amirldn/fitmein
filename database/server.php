@@ -12,7 +12,7 @@ $errors = array();
 //conect to
 
 $db = mysqli_connect('localhost', 'root', '', 'b66957') or die("could not
-connect to database")
+connect to database");
 
 if ($db) {
   echo 'connected';
