@@ -6,6 +6,9 @@
 $startTime = $_GET["startDT"];
 $endTime = $_GET["endDT"];
 
+echo $startTime;
+echo $endTime;
+
 ?>
 
 
