@@ -6,6 +6,11 @@
 $startTime = $_GET["startDT"];
 $endTime = $_GET["endDT"];
 
+echo $startTime;
+echo $endTime;
+
+?>
+
 
 
 
@@ -52,9 +57,6 @@ $endTime = $_GET["endDT"];
 					</div>
 				</nav>
 			</div>
-
-			echo $startTime;
-			echo $endTime;
 
 
 			<div class="container">
@@ -116,7 +118,7 @@ $endTime = $_GET["endDT"];
 </div>
 </footer>
 
-?>
+
 
 <!--JavaScript at end of body for optimized loading-->
 <script type="text/javascript" src="js/materialize.min.js"></script>
