@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     maxDate: new Date(2021,0,1),
     defaultDate: new Date()
   }
-  var elemsdpE = document.querySelectorAll('.datepickerEarliest');
+  elemsdpE = document.querySelectorAll('.datepickerEarliest');
   var instances = M.Datepicker.init(elemsdpE, options);
   // instanceEarliest = M.Datepicker.getInstance(document.querySelectorAll('.datepickerLatest'));
 });
@@ -28,9 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
     maxDate: new Date(2021,0,1),
     defaultDate: new Date()
   }
-  var elemsdpL = document.querySelectorAll('.datepickerLatest');
+  elemsdpL = document.querySelectorAll('.datepickerLatest');
   var instances = M.Datepicker.init(elemsdpL, options);
-  // instanceLatest = M.Datepicker.getInstance(document.querySelectorAll('.datepickerLatest'));
+  // var instanceLatest = M.Datepicker.getInstance(document.querySelectorAll('.datepickerLatest'));
+  // alert(instanceLatest.toString())
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -51,8 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
       dropdown: true,
       scrollbar: true
     }
-  var elems = document.querySelectorAll('.timepicker');
-  var instances = M.Timepicker.init(elems, options);
+  elemsTP = document.querySelectorAll('.timepicker');
+  var instances = M.Timepicker.init(elemsTP, options);
 });
 
 
@@ -64,8 +65,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //James' function
 function myembedjs(){
-  // var earliestDatePicked = instanceEarliest.toString();
-  // alert(instanceEarliest.toString());
+  //this lets you call propeties from the earliest and latest datepickers
+  var instanceEarliest = M.Datepicker.getInstance(elemsdpE);
+  var instanceLatest = M.Datepicker.getInstance(elemsdpL);
+  var instanceTimePicker = M.Timepicker.getInstance(elemsTP);
+  alert(instanceEarliest.toString())
 
   try {
     alert(returnedPlaceID + " From init.js");
