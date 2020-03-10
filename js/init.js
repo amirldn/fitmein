@@ -23,6 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
   var instances = M.Datepicker.init(elemsdpL, showClearBtn=true);
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('select');
+  var instances = M.FormSelect.init(elems, options);
+});
+
 
 //Timepicker
 $('.timepicker').timepicker({
@@ -56,7 +61,7 @@ function myembedjs(){
   var rtndObj = findBestTime(new Date(2020, 1, 2), new Date(2020, 1, 04), 9, 17, 60, returnedPlaceID, "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU");
   var startDT = rtndObj[0];
   var endDT = rtndObj[1];
-  
+
   window.location.href = ("./results.php?startDT=" + startDT + "&endDT=" + endDT);
 
 }
