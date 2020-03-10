@@ -7,39 +7,52 @@ document.addEventListener('DOMContentLoaded', function() {
   var instances = M.Modal.init(elemsModal, preventScrolling=true);
 });
 
-
-// Datepickers
-// $( ".datepickerEarliest" ).datepicker({});
-//
-// $( ".datepickerLatest" ).datepicker({});
-
 document.addEventListener('DOMContentLoaded', function() {
+  var options = {
+    autoClose: true,
+    showClearBtn: true,
+    minDate: new Date(),
+    maxDate: new Date(2021,0,1),
+    defaultDate: new Date()
+  }
   var elemsdpE = document.querySelectorAll('.datepickerEarliest');
-  var instances = M.Datepicker.init(elemsdpE, minDate=-1);
+  var instances = M.Datepicker.init(elemsdpE, options);
+  // instanceEarliest = M.Datepicker.getInstance(document.querySelectorAll('.datepickerLatest'));
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+  var options = {
+    autoClose: true,
+    showClearBtn: true,
+    minDate: new Date(),
+    maxDate: new Date(2021,0,1),
+    defaultDate: new Date()
+  }
   var elemsdpL = document.querySelectorAll('.datepickerLatest');
-  var instances = M.Datepicker.init(elemsdpL, showClearBtn=true);
+  var instances = M.Datepicker.init(elemsdpL, options);
+  // instanceLatest = M.Datepicker.getInstance(document.querySelectorAll('.datepickerLatest'));
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+  var options = {
+
+  }
   var elems = document.querySelectorAll('select');
   var instances = M.FormSelect.init(elems, options);
 });
 
-
-//Timepicker
-$('.timepicker').timepicker({
-    timeFormat: 'h:mm p',
-    interval: 15,
-    minTime: '12:00am',
-    maxTime: '11:45pm',
-    defaultTime: '11',
-    startTime: '00:00',
-    dynamic: false,
-    dropdown: true,
-    scrollbar: true
+document.addEventListener('DOMContentLoaded', function() {
+  var options ={defaultTime: '11',
+      timeFormat: 'h:mm p',
+      interval: 15,
+      defaultTime: '11',
+      startTime: '00:00',
+      dynamic: false,
+      dropdown: true,
+      scrollbar: true
+    }
+  var elems = document.querySelectorAll('.timepicker');
+  var instances = M.Timepicker.init(elems, options);
 });
 
 
@@ -51,6 +64,9 @@ $('.timepicker').timepicker({
 
 //James' function
 function myembedjs(){
+  // var earliestDatePicked = instanceEarliest.toString();
+  // alert(instanceEarliest.toString());
+
   try {
     alert(returnedPlaceID + " From init.js");
   }
