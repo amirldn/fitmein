@@ -31,9 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
   elemsdpL = document.querySelectorAll('.datepickerLatest');
   var instances = M.Datepicker.init(elemsdpL, options);
   instanceLatest = M.Datepicker.getInstance(elemsdpL);
-
-  // var instanceLatest = M.Datepicker.getInstance(document.querySelectorAll('.datepickerLatest'));
-  // alert(instanceLatest.toString())
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -68,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //   findBestTimeCaller()
 // }
 
-function setEarliestDate(){
+function getEarliestDate(){
   try {
     earliestDateSet = M.Datepicker.getInstance($('.datepickerEarliest')).date;
   } catch (e) {
@@ -76,7 +73,7 @@ function setEarliestDate(){
 
 }
 
-function setLatestDate(){
+function getLatestDate(){
   try {
     latestDateSet = M.Datepicker.getInstance($('.datepickerLatest')).date;
 
@@ -88,8 +85,19 @@ function setLatestDate(){
 
 
 function setTime(){
-  timeSet = M.Timepicker.getInstance($('.timepicker')).time;
-  timeSet = timeSet.replace(/(^\d+)(.+$)/i,'$1'); //=> '123'
+  try {
+    timeSet = M.Timepicker.getInstance($('.timepicker')).time;
+    timeSet = timeSet.replace(/(^\d+)(.+$)/i,'$1'); //=> '123'
+  } catch (e) {
+  }
+}
+
+function getHoursSpent(){
+  try {
+    hoursSpent = M.FormSelect.getInstance('select');
+  } catch (e) {
+
+  }
 }
 
 
@@ -97,11 +105,13 @@ function setTime(){
 function myembedjs(){
 
   // prints date earliest
-  setLatestDate();
-  setEarliestDate();
-  setTime();
+  getLatestDate();
+  getEarliestDate();
+  getTime();
+  getHoursSpent();
   // alert("Earliest :"+earliestDateSet +"Latest :"+ latestDateSet);
   // alert(timeSet);
+  alert(hoursSpent)
   try {
     alert(returnedPlaceID + " From init.js");
   }
@@ -110,7 +120,7 @@ function myembedjs(){
   }
   // var rtndObj = findBestTime(new Date(2020, 1, 2), new Date(2020, 1, 04), 9, 17, 60, returnedPlaceID, "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU");
 
-  var rtndObj = findBestTime(earliestDateSet, latestDateSet, timeSet, 17, 60, returnedPlaceID, "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU");
+  var rtndObj = findBestTime(earliestDateSet, latestDateSet, 9, timeSet, 60, returnedPlaceID, "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU");
 
   var startDT = rtndObj[0];
   var endDT = rtndObj[1];
