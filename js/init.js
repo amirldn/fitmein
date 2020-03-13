@@ -94,7 +94,9 @@ function setTime(){
 
 function getHoursSpent(){
   try {
-    hoursSpent = M.FormSelect.getInstance('select');
+    // hoursSpentInstance = M.FormSelect.getInstance($('.lengthOfStay'));
+    timeSpent = document.getElementById("lengthOfStayID").value;
+
   } catch (e) {
 
   }
@@ -111,7 +113,9 @@ function myembedjs(){
   getHoursSpent();
   // alert("Earliest :"+earliestDateSet +"Latest :"+ latestDateSet);
   // alert(timeSet);
-  alert(hoursSpent)
+  alert(timeSpent);
+
+
   try {
     alert(returnedPlaceID + " From init.js");
   }
@@ -120,7 +124,7 @@ function myembedjs(){
   }
   // var rtndObj = findBestTime(new Date(2020, 1, 2), new Date(2020, 1, 04), 9, 17, 60, returnedPlaceID, "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU");
 
-  var rtndObj = findBestTime(earliestDateSet, latestDateSet, 9, timeSet, 60, returnedPlaceID, "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU");
+  var rtndObj = findBestTime(earliestDateSet, latestDateSet, 0, timeSet, timeSpent, returnedPlaceID, "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU");
 
   var startDT = rtndObj[0];
   var endDT = rtndObj[1];
