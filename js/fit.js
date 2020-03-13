@@ -9,6 +9,7 @@ function findBestTime(dateMin, dateMax, timeMin, timeMax, timeSpent, placeID, ap
     return "ERROR_UNDEFINED_PARAMETERS";
   }
   alert("Function started!");
+  alert(dateMin+dateMax+"THIS IS FROM THE FUNCTION")
 
   var outputWarnings = [];
 

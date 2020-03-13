@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
     showClearBtn: true,
     minDate: new Date(),
     maxDate: new Date(2021,0,1),
-    defaultDate: new Date()
+    defaultDate: new Date(),
   }
   elemsdpE = document.querySelectorAll('.datepickerEarliest');
   var instances = M.Datepicker.init(elemsdpE, options);
-  // instanceEarliest = M.Datepicker.getInstance(document.querySelectorAll('.datepickerLatest'));
+  // M.Datepicker.getInstance($('.datepickerEarliest')).date;
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -26,10 +26,12 @@ document.addEventListener('DOMContentLoaded', function() {
     showClearBtn: true,
     minDate: new Date(),
     maxDate: new Date(2021,0,1),
-    defaultDate: new Date()
+    defaultDate: new Date(),
   }
   elemsdpL = document.querySelectorAll('.datepickerLatest');
   var instances = M.Datepicker.init(elemsdpL, options);
+  instanceLatest = M.Datepicker.getInstance(elemsdpL);
+
   // var instanceLatest = M.Datepicker.getInstance(document.querySelectorAll('.datepickerLatest'));
   // alert(instanceLatest.toString())
 });
@@ -50,10 +52,13 @@ document.addEventListener('DOMContentLoaded', function() {
       startTime: '00:00',
       dynamic: false,
       dropdown: true,
-      scrollbar: true
+      scrollbar: true,
+      twelveHour: false
     }
   elemsTP = document.querySelectorAll('.timepicker');
   var instances = M.Timepicker.init(elemsTP, options);
+  instanceTimePicker = M.Timepicker.getInstance(elemsTP);
+
 });
 
 
@@ -63,22 +68,50 @@ document.addEventListener('DOMContentLoaded', function() {
 //   findBestTimeCaller()
 // }
 
+function setEarliestDate(){
+  try {
+    earliestDateSet = M.Datepicker.getInstance($('.datepickerEarliest')).date;
+  } catch (e) {
+  }
+
+}
+
+function setLatestDate(){
+  try {
+    latestDateSet = M.Datepicker.getInstance($('.datepickerLatest')).date;
+
+  } catch (e) {
+
+  }
+}
+
+
+
+function setTime(){
+  timeSet = M.Timepicker.getInstance($('.timepicker')).time;
+  timeSet = timeSet.replace(/(^\d+)(.+$)/i,'$1'); //=> '123'
+}
+
+
 //James' function
 function myembedjs(){
-  //this lets you call propeties from the earliest and latest datepickers
-  var instanceEarliest = M.Datepicker.getInstance(elemsdpE);
-  var instanceLatest = M.Datepicker.getInstance(elemsdpL);
-  var instanceTimePicker = M.Timepicker.getInstance(elemsTP);
-  alert(instanceEarliest.toString())
 
+  // prints date earliest
+  setLatestDate();
+  setEarliestDate();
+  setTime();
+  // alert("Earliest :"+earliestDateSet +"Latest :"+ latestDateSet);
+  // alert(timeSet);
   try {
     alert(returnedPlaceID + " From init.js");
   }
   catch (e) {
     alert("You did not enter a location");
   }
-  // alert(($('.datepickerEarliest').datepicker('toString')).value);
-  var rtndObj = findBestTime(new Date(2020, 1, 2), new Date(2020, 1, 04), 9, 17, 60, returnedPlaceID, "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU");
+  // var rtndObj = findBestTime(new Date(2020, 1, 2), new Date(2020, 1, 04), 9, 17, 60, returnedPlaceID, "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU");
+
+  var rtndObj = findBestTime(earliestDateSet, latestDateSet, timeSet, 17, 60, returnedPlaceID, "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU");
+
   var startDT = rtndObj[0];
   var endDT = rtndObj[1];
 

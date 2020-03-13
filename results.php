@@ -23,12 +23,14 @@ echo $endTime;
 	<title>Results | FitMeIn</title>
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 	<script type="text/javascript" src="js/auto.js"></script>
 	<link type="text/css" rel="stylesheet" href="css/autocomplete.css"  media="screen,projection"/>
 	<script type="text/javascript" src="js/fit.js"></script>
-	<script src="js/init.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
 
 
 
@@ -122,8 +124,9 @@ echo $endTime;
 
 <!--JavaScript at end of body for optimized loading-->
 <script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="js/init.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU&libraries=places&callback=initAutocomplete"
-async defer></script>
+				async defer></script>
 </body>
 </html>
 </html>
