@@ -1,4 +1,5 @@
 var locationArray = [];
+var idArray = [];
 var timeTaken;
 
 function getLatLong(placeID, apiKey){
@@ -20,19 +21,37 @@ function getLatLong(placeID, apiKey){
 
     		location = new google.maps.LatLng( returnObjCoord[1].latitude, returnObjCoord[1].longitude );
     		locationArray.push(location);
+				idArray.push(placeID);
     	}
     }
 
 }
 
 function pairLocations(){
+	var itineraryResults;
+														//called when search button hit
 	timeTaken = new Array(locationArray.length);
 	for (var i = 0; i < locationArray.length; ++i)
 		timeTaken[i] = new Array(locationArray.length);
 
 	for (var i = 0; i < locationArray.length; ++i)
 		for (var j = i + 1; j < locationArray.length; ++j)
-			getTimings(i, j);
+			getTimings(i, j);		//calls getTimings multiple times, to complete matrix
+
+	itineraryResults = itinerary(timeTaken);
+
+	var totalTime = itineraryResults[0];
+	var route = itineraryResults[1];
+	for (var i = 0; i < route.length; ++i)
+		route[i] = idArray[route[i]];
+
+	totalTime = totalTime.toString();
+	var routeLength = route.length;
+	routeLength = routeLength.toString();
+	var strRoute = route.toString();
+
+	var urlItin = "resultsItinerary.php?routeTime=" + totalTime + "&routeLength=" + routeLength + "&routeOrder=" + strRoute;
+
 }
 
 function getTimings(locationOneIndex, locationTwoIndex){
@@ -48,7 +67,7 @@ function getTimings(locationOneIndex, locationTwoIndex){
 
 	    if ( status === 'OK' ) {
 	        var point = response.routes[ 0 ].legs[ 0 ];
-	        timeTaken[locationOneIndex][locationTwoIndex] = parseFloat(point.duration.text);
+	        timeTaken[locationOneIndex][locationTwoIndex] = timeTaken[locationTwoIndex][locationOneIndex] = parseFloat(point.duration.text);
 
 
 	        // $( '#travel_data' ).html( 'Estimated travel time: ' + point.duration.text + ' (' + point.distance.text + ')' );
@@ -59,6 +78,8 @@ function getTimings(locationOneIndex, locationTwoIndex){
 	} );
 
 }
+
+
 
 
 function getSynchr(urlToGet) { // Make an HTTP request synchronously (i.e. wait for the response before continuing)
