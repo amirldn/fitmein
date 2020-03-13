@@ -12,7 +12,10 @@
 
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-		<script type="text/javascript" src="js/auto.js"></script>
+		<script type="text/javascript" src="js/autoIten.js"></script>
+		<script type="text/javascript" src="js/autoIten2.js"></script>
+		<script type="text/javascript" src="js/autoIten3.js"></script>
+
 		<link type="text/css" rel="stylesheet" href="css/autocomplete.css"  media="screen,projection"/>
 		<script type="text/javascript" src="js/fit.js"></script>
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -60,25 +63,39 @@
 												<div class="row center">
 
 													<form>
-										        <div class="input-field">
-										          <input id="search" id="placeIDfromSearchBox1" type="search" placeholder="🔎 Location 1..." style="color: black;" required>
-										          <label class="label-icon" for="search"></label>
-										          <i class="material-icons">close</i>
+														<div class="input-field">
+															<div id="locationField1">
+															  <input id="autocomplete"
+															         placeholder="🔎 Location Search..."
+															         onFocus="geolocate()"
+																			 style="color: white;"
+															         type="text"/>
+															</div>
 										        </div>
 										      </form>
 													<form>
 														<div class="input-field">
-															<input id="search" id="placeIDfromSearchBox2" type="search" placeholder="🔎 Location 2..." style="color: black;" required>
-															<label class="label-icon" for="search"></label>
-															<i class="material-icons">close</i>
-														</div>
+															<div id="locationField2">
+															  <input id="autocomplete2"
+															         placeholder="🔎 Location Search..."
+															         onFocus="geolocate()"
+																			 style="color: white;"
+															         type="text"/>
+															</div>
+
+										        </div>
 													</form>
 													<form>
 														<div class="input-field">
-															<input id="search" id="placeIDfromSearchBox3" type="search" placeholder="🔎 Location 3..." style="color: black;" required>
-															<label class="label-icon" for="search"></label>
-															<i class="material-icons">close</i>
-														</div>
+															<div id="locationField3">
+															  <input id="autocomplete3"
+															         placeholder="🔎 Location Search..."
+															         onFocus="geolocate()"
+																			 style="color: white;"
+															         type="text"/>
+															</div>
+
+										        </div>
 													</form>
 												</div>
 
