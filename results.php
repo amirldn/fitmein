@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+
+$startTime = $_GET["startDT"];
+$endTime = $_GET["endDT"];
+
+?>
 <html lang="en">
 <head>
 	<link type="text/css" rel="stylesheet" href="css/FitMeIn_style.css"  media="screen,projection"/>
@@ -28,7 +34,8 @@
 </header>
 
 <main>
-	<body onload="myembedjs();">
+	<!-- onload="myembedjs();" -->
+	<body>
 		<div class="navbar-fixed">
 			<nav>
 				<div class="nav-wrapper green darken-1 z-depth-2">
@@ -46,37 +53,41 @@
 				</nav>
 			</div>
 
-
+<br>
+<br>
 			<div class="container">
 				<div class="row center">
 					<div class="header col s12 light textShadow"><h2 style="color: white; font-size: 30px">This is what your day will look like...</h2></div>
 				</div>
 			</div>
+			<br>
 
 			<div class="container" style=" position: relative;
 			margin: auto;
-			width: 400px;
+			width: 700px;
 			height: 100px;">
 
-			<div class="row center">
-				<div class="col s6">
-					<?php
-
-					$startTime = $_GET["startDT"];
-					$endTime = $_GET["endDT"];
-
-					// echo $startTime;
-					// echo $endTime;
-
-					?>
-					<p></p>
-
-
-
-				</div>
-
+			<div class="row">
+	<div class="col s12 ">
+		<div class="card z-depth-3 green">
+			<div class="card-content white-text">
+				<span class="card-title center">FitMeIn found you a time!</span>
+				<br>
+				<p>You'll be able to go to your event on: </p>
+				<p><?php echo $startTime ?></p>
+				<p>and finish at </p>
+				<p><?php echo $endTime ?></p>
+			</div>
+			<div class="card-action center">
+				<a href="#">Search Again</a>
+				<a href="#">Alternative Time</a>
+				<a href="#">Add to Calendar</a>
 
 			</div>
+		</div>
+	</div>
+</div>
+
 		</div>
 
 
