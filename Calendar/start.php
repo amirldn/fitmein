@@ -77,9 +77,8 @@ $results = $service->events->listEvents($calendarId, $optParams);
 $events = $results->getItems();
 
 if (empty($events)) {
-    print "No upcoming events found.\n";
+    print "No upcoming events found.";
 } else {
-    print "Upcoming events:\n";
     foreach ($events as $event) {
         $start = $event->start->dateTime;
 

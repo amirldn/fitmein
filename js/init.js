@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   var options = {
-
   }
   var elems = document.querySelectorAll('select');
   var instances = M.FormSelect.init(elems, options);
@@ -89,6 +88,7 @@ function setTime(){
     timeSet = M.Timepicker.getInstance($('.timepicker')).time;
     timeSet = timeSet.replace(/(^\d+)(.+$)/i,'$1'); //=> '123'
   } catch (e) {
+
   }
 }
 
@@ -102,18 +102,23 @@ function getHoursSpent(){
   }
 }
 
+function getCalToken(){
+  calTokenIn = document.getElementById("calTokenID").value;
+}
+
+
+
 
 //James' function
 function myembedjs(){
 
-  // prints date earliest
+  // gets all values from the front page
   getLatestDate();
   getEarliestDate();
   getTime();
   getHoursSpent();
-  // alert("Earliest :"+earliestDateSet +"Latest :"+ latestDateSet);
-  // alert(timeSet);
-  alert(timeSpent);
+  getCalToken();
+  alert(calTokenID);
 
 
   try {
@@ -122,7 +127,7 @@ function myembedjs(){
   catch (e) {
     alert("You did not enter a location");
   }
-  var rtndObj = findBestTime(new Date(2020, 1, 2), new Date(2020, 1, 04), 9, 17, 60, returnedPlaceID, "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU");
+  var rtndObj = findBestTime(new Date(2020, 1, 2), new Date(2020, 1, 04), 9, 17, 60, returnedPlaceID, "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU", calTokenIn);
 
   // var rtndObj = findBestTime(earliestDateSet, latestDateSet, 0, timeSet, timeSpent, returnedPlaceID, "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU");
 
@@ -131,6 +136,21 @@ function myembedjs(){
 
   window.location.href = ("./results.php?startDT=" + startDT + "&endDT=" + endDT);
 
+}
+
+
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2)
+        month = '0' + month;
+    if (day.length < 2)
+        day = '0' + day;
+
+    return [year, month, day].join('-');
 }
 
 

@@ -1,19 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<?php
-
-$startTime = $_GET["startDT"];
-$endTime = $_GET["endDT"];
-
-echo $startTime;
-echo $endTime;
-
-?>
-
-
-
-
 <head>
 	<link type="text/css" rel="stylesheet" href="css/FitMeIn_style.css"  media="screen,projection"/>
 	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
@@ -73,6 +59,22 @@ echo $endTime;
 			height: 100px;">
 
 			<div class="row center">
+				<div class="col s6">
+					<?php
+
+					$startTime = $_GET["startDT"];
+					$endTime = $_GET["endDT"];
+
+					// echo $startTime;
+					// echo $endTime;
+
+					?>
+					<p></p>
+
+
+
+				</div>
+
 
 			</div>
 		</div>
