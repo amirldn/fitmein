@@ -118,8 +118,6 @@ function myembedjs(){
   getTime();
   getHoursSpent();
   getCalToken();
-  alert(calTokenID);
-
 
   try {
     alert(returnedPlaceID + " From init.js");
