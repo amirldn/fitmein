@@ -39,17 +39,19 @@ $locationName = $_GET["locationName"];
 	<body>
 		<div class="navbar-fixed">
 			<nav>
-				<div class="nav-wrapper green darken-1 z-depth-2">
-					<!-- 		      			<a href="#" class="brand-logo">FitMeIn</a>
-				-->		      			<a href="index.html"><img id="FitMeInLogoNav" id="logo-container" src="./images/fitmein_logo_final.png" class="brand-logo"></a>
-				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a href="itinerarySearch.html">Itinerary</a></li>
-					<li><a href="legal.html">Legal</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a style="font-size: 20px">|</a>
+					<div class="nav-wrapper green darken-1 z-depth-2">
+<!-- 		      			<a href="#" class="brand-logo">FitMeIn</a>
+-->		      			<a href="index.php"><img id="FitMeInLogoNav" id="logo-container" src="./images/fitmein_logo_final.png" class="brand-logo"></a>
+							<ul id="nav-mobile" class="right hide-on-med-and-down">
+								<li><a href="itinerarySearch.html">Itinerary</a></li>
+								<li><a href="legal.html">Legal</a></li>
+								<li><a href="about.html">About</a></li>
+						<li><a style="font-size: 20px">|</a>
 						<li><a href="login.php"> Login </a>
+							<li><a href="accountDetails.html"> My Account </a>
 
-						</ul>
+
+							</ul>
 					</div>
 				</nav>
 			</div>
@@ -115,24 +117,24 @@ $locationName = $_GET["locationName"];
 		bottom: 0;
 		width: 100%;
 		height: 5%;">
-		<div class="container">
-			<div class="footer-copyright green darken-3" style="  position: fixed;
-			left: 0;
-			bottom: 0;
-			width: 100%;
-			height: 5%;">
-			<div class="container" style="text-align: center" >
-				<div style="color:silver;
-				font-size: 9px">
-				BY USING THIS SERVICE, YOU AGREE TO THE FOLLOWING TERMS AND CONDITIONS (THE "AGREEMENT") GOVERNING YOUR USE OF FitMeIn ONLINE SERVICE (THE "SERVICE").</div>
-				<div style="color:white;
-				font-size: 13px">
-				© 2020 FitMeIn v1.0.5
-			</div>
-		</div>
-	</div>
-</div>
-</footer>
+								<div class="container">
+									<div class="footer-copyright green darken-3" style="  position: fixed;
+								left: 0;
+								bottom: 0;
+								width: 100%;
+								height: 5%;">
+										<div class="container" style="text-align: center" >
+											<div style="color:silver;
+																	font-size: 9px">
+										BY USING THIS SERVICE, YOU AGREE TO THE FOLLOWING <a href="legal.html">TERMS AND CONDITIONS</a> (THE "AGREEMENT") GOVERNING YOUR USE OF FitMeIn ONLINE SERVICE (THE "SERVICE") AND <a href="legal.html">PRIVACY POLICY</a>.</div>
+										<div style="color:white;
+																font-size: 13px">
+										© 2020 FitMeIn v0.8.9
+										</div>
+									</div>
+								</div>
+							</div>
+			</footer>
 
 
 
