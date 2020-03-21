@@ -9,7 +9,7 @@ function findBestTime(dateMin, dateMax, timeMin, timeMax, timeSpent, placeID, ap
   if ((dateMin == undefined) || (dateMax == undefined) || (timeMin == undefined) || (timeMax == undefined) || (timeSpent == undefined) || (placeID == undefined) || (apiKey == undefined) || (calTokenIn == undefined)) {
     return "ERROR_UNDEFINED_PARAMETERS";
   }
-  alert("Function started!");
+  // alert("Function started!");
 
   var outputWarnings = [];
 

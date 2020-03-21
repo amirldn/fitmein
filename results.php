@@ -3,6 +3,7 @@
 
 $startTime = $_GET["startDT"];
 $endTime = $_GET["endDT"];
+$locationName = $_GET["locationName"];
 
 ?>
 <html lang="en">
@@ -69,11 +70,11 @@ $endTime = $_GET["endDT"];
 
 			<div class="row">
 	<div class="col s12 ">
-		<div class="card z-depth-3 green">
-			<div class="card-content white-text">
+		<div class="card z-depth-3 green darken-1">
+			<div class="card-content green white-text">
 				<span class="card-title center">FitMeIn found you a time!</span>
 				<br>
-				<p>You'll be able to go to your event on: </p>
+				<p>You'll be able to go to <b><?php echo $locationName ?></b> on: </p>
 				<p><?php echo $startTime ?></p>
 				<p>and finish at </p>
 				<p><?php echo $endTime ?></p>
