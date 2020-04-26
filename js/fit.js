@@ -3,7 +3,7 @@
 // v0.3, 2020.03.14@13:30
 
 //<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU&libraries=places"></script>
-// https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU&place_id=ChIJN1t_tDeuEmsRUsoyG83frY4&fields=name,opening_hours
+// https://maps.googleapis.com/maps/api/place/details/json?key=**API KEY HIDDEN**&place_id=ChIJN1t_tDeuEmsRUsoyG83frY4&fields=name,opening_hours
 
 function findBestTime(dateMin, dateMax, timeMin, timeMax, timeSpent, placeID, apiKey, calTokenIn){
   if ((dateMin == undefined) || (dateMax == undefined) || (timeMin == undefined) || (timeMax == undefined) || (timeSpent == undefined) || (placeID == undefined) || (apiKey == undefined) || (calTokenIn == undefined)) {

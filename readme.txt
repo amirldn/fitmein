@@ -43,7 +43,7 @@ P A R A M E T E R S  F O R  T H E  'findBestTime'  F U N C T I O N :
     var newObj;
     newObj = findBestTime(new Date(2020, 1, 2), new Date(2020, 1, 04), 9, 17,
                           60, "ChIJeziKgJKxe0gR8qUIiSmWKJo",
-                          "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU");
+                          "**API KEY HIDDEN**");
 
 
 

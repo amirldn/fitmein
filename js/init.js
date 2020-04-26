@@ -135,9 +135,9 @@ function myembedjs(){
     alert("You did not enter a location");
   }
 
-  // var rtndObj = findBestTime(new Date(2020, 1, 2), new Date(2020, 1, 04), 9, 17, 60, returnedPlaceID, "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU", calTokenIn);
+  // var rtndObj = findBestTime(new Date(2020, 1, 2), new Date(2020, 1, 04), 9, 17, 60, returnedPlaceID, "**API KEY HIDDEN**-GJC_BIDpU", calTokenIn);
 
-  var rtndObj = findBestTime(earliestDateSet, latestDateSet, 0, timeSet, timeSpent, returnedPlaceID, "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU", calTokenIn);
+  var rtndObj = findBestTime(earliestDateSet, latestDateSet, 0, timeSet, timeSpent, returnedPlaceID, "**API KEY HIDDEN**-GJC_BIDpU", calTokenIn);
 
   var startDT = rtndObj[0];
   var endDT = rtndObj[1];
@@ -163,7 +163,7 @@ function formatDate(date) {
 
 
 //original
-//  alert(findBestTime(new Date(2020, 1, 2), new Date(2020, 1, 04), 9, 17, 60, "ChIJeziKgJKxe0gR8qUIiSmWKJo", "AIzaSyACHAZEZeyYI36Dxezeq9axe-GJC_BIDpU"));
+//  alert(findBestTime(new Date(2020, 1, 2), new Date(2020, 1, 04), 9, 17, 60, "ChIJeziKgJKxe0gR8qUIiSmWKJo", "**API KEY HIDDEN**-GJC_BIDpU"));
 
 
 //ChIJeziKgJKxe0gR8qUIiSmWKJo PLACE ID ORIGINAL
